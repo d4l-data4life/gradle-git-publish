@@ -20,7 +20,7 @@ reckon {
   stageFromProp('alpha', 'beta', 'rc', 'final')
 }
 
-group = 'org.ajoberstar'
+group = 'care.data4life'
 
 sourceCompatibility = 8
 
@@ -60,12 +60,12 @@ stutter {
 }
 
 pluginBundle {
-  website = 'https://github.com/ajoberstar/gradle-git-publish'
-  vcsUrl = 'https://github.com/ajoberstar/gradle-git-publish.git'
+  website = 'https://github.com/d4l-data4life/gradle-git-publish'
+  vcsUrl = 'https://github.com/d4l-data4life/gradle-git-publish.git'
   description = 'Publishing to Git repositories'
   plugins {
     publishPlugin {
-      id = 'org.ajoberstar.git-publish'
+      id = 'care.data4life.git-publish'
       displayName = 'Git Publish Plugin'
       tags = ['publish', 'git']
     }
@@ -78,4 +78,4 @@ pluginBundle {
 }
 
 // remove duplicate publication
-gradlePlugin.automatedPublishing = false
+//gradlePlugin.automatedPublishing = false
