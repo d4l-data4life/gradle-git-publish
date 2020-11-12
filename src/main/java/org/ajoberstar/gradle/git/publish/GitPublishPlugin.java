@@ -39,9 +39,11 @@ public class GitPublishPlugin implements Plugin<Project> {
     Task copy = createCopyTask(project, extension);
     Task commit = createCommitTask(project, extension, reset.getGrgit());
     Task push = createPushTask(project, extension, reset.getGrgit());
-    push.dependsOn(commit);
-    commit.dependsOn(copy);
-    copy.dependsOn(reset);
+
+    // Dependency is not needed
+//    push.dependsOn(commit);
+//    commit.dependsOn(copy);
+//    copy.dependsOn(reset);
 
     // always close the repo at the end of the build
     project.getGradle().buildFinished(result -> {
