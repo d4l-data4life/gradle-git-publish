@@ -1,6 +1,7 @@
 plugins {
   id 'org.ajoberstar.grgit'
-  id 'org.ajoberstar.reckon'
+
+  id "fr.brouillard.oss.gradle.jgitver" version "0.6.1"
 
   id 'maven-publish'
   id 'java-gradle-plugin'
@@ -15,14 +16,25 @@ apply from: 'gradle/spotless.gradle'
 apply from: 'gradle/locking.gradle'
 apply from: 'gradle/bintray.gradle'
 
-reckon {
-  scopeFromProp()
-  stageFromProp('alpha', 'beta', 'rc', 'final')
-}
-
 group = 'care.data4life'
 
 sourceCompatibility = 8
+
+jgitver {
+  policy {
+    pattern = "feature/(.*)"
+    transformations = ['LOWERCASE_EN']
+  }
+
+  policy {
+    pattern = "(main)"
+    transformations = ["IGNORE"]
+  }
+
+  nonQualifierBranches = "main"
+
+  useDistance(true)
+}
 
 java {
   withSourcesJar()
