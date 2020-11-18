@@ -1,10 +1,10 @@
-package org.ajoberstar.gradle.git.publish;
+package care.data4life.gradle.git.publish;
 
 import java.util.Optional;
 
-import org.ajoberstar.gradle.git.publish.tasks.GitPublishCommit;
-import org.ajoberstar.gradle.git.publish.tasks.GitPublishPush;
-import org.ajoberstar.gradle.git.publish.tasks.GitPublishReset;
+import care.data4life.gradle.git.publish.tasks.GitPublishReset;
+import care.data4life.gradle.git.publish.tasks.GitPublishCommit;
+import care.data4life.gradle.git.publish.tasks.GitPublishPush;
 import org.ajoberstar.grgit.Grgit;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;

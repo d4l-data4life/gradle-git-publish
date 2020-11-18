@@ -1,4 +1,4 @@
-package org.ajoberstar.gradle.git.publish;
+package care.data4life.gradle.git.publish;
 
 
 import org.gradle.api.Action;

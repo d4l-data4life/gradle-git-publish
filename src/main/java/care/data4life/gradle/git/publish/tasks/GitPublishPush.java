@@ -1,4 +1,4 @@
-package org.ajoberstar.gradle.git.publish.tasks;
+package care.data4life.gradle.git.publish.tasks;
 
 import java.io.File;
 import java.util.Arrays;
